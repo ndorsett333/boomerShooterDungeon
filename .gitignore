@@ -1,0 +1,30 @@
+# Godot editor/import cache
+.import/
+.export/
+
+# Godot generated metadata (safe to regenerate)
+*.import
+export_presets.cfg
+
+# Mono/C# builds (ignore if ever enabled)
+.mono/
+
+# Build artifacts and archives
+*.pck
+*.apk
+*.ipa
+
+# Crash logs and temporary files
+*.log
+*.tmp
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+
+# Local env files
+.env
+.env.*
+
+# Prompt/reference docs not meant for source control
+boomer-shooter-framework-prompt.md
