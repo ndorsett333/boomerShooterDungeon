@@ -33,8 +33,9 @@ func _play_slash_animation() -> void:
 	tween.start()
 
 func _apply_hit_if_enemy_in_range() -> void:
-	var from := camera.global_transform.origin
-	var to := from + -camera.global_transform.basis.z * attack_range
+	var from: Vector3 = camera.global_transform.origin
+	var forward: Vector3 = -camera.global_transform.basis.z
+	var to: Vector3 = from + (forward * attack_range)
 	var exclude := [get_parent().get_parent()]
 	var hit := get_world().direct_space_state.intersect_ray(from, to, exclude)
 

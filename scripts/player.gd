@@ -72,4 +72,6 @@ func _on_health_changed(current_health: int, max_health: int) -> void:
 
 func _on_died() -> void:
 	# Minimal death loop: reload test scene for immediate retry.
-	get_tree().reload_current_scene()
+	var err := get_tree().reload_current_scene()
+	if err != OK:
+		push_warning("Failed to reload current scene. Error code: %d" % err)

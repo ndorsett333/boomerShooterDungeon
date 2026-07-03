@@ -1,0 +1,6 @@
+[gd_resource type="SpatialMaterial" format=2]
+
+[ext_resource type="Texture" path="res://assets/textures/wall.png" id="1"]
+
+[resource]
+albedo_texture = ExtResource( 1 )

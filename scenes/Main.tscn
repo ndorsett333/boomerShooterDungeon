@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/EnemyGoblin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/materials/wall_material.tres" type="Material" id=4]
 
 [node name="Main" type="Spatial"]
 script = ExtResource( 1 )
@@ -41,6 +42,7 @@ use_collision = true
 width = 12.0
 height = 4.0
 depth = 1.0
+material = ExtResource( 4 )
 
 [node name="StartWallLeft" type="CSGBox" parent="Dungeon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, 0 )
@@ -48,6 +50,7 @@ use_collision = true
 width = 1.0
 height = 4.0
 depth = 12.0
+material = ExtResource( 4 )
 
 [node name="StartWallRight" type="CSGBox" parent="Dungeon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.5, 0 )
@@ -55,6 +58,7 @@ use_collision = true
 width = 1.0
 height = 4.0
 depth = 12.0
+material = ExtResource( 4 )
 
 [node name="StartWallFrontLeft" type="CSGBox" parent="Dungeon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.5, -6 )
@@ -62,6 +66,7 @@ use_collision = true
 width = 3.0
 height = 4.0
 depth = 1.0
+material = ExtResource( 4 )
 
 [node name="StartWallFrontRight" type="CSGBox" parent="Dungeon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 1.5, -6 )
@@ -69,6 +74,7 @@ use_collision = true
 width = 3.0
 height = 4.0
 depth = 1.0
+material = ExtResource( 4 )
 
 [node name="CorridorWallLeft" type="CSGBox" parent="Dungeon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.5, -13 )
@@ -76,6 +82,7 @@ use_collision = true
 width = 1.0
 height = 4.0
 depth = 14.0
+material = ExtResource( 4 )
 
 [node name="CorridorWallRight" type="CSGBox" parent="Dungeon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.5, -13 )
@@ -83,6 +90,7 @@ use_collision = true
 width = 1.0
 height = 4.0
 depth = 14.0
+material = ExtResource( 4 )
 
 [node name="EnemyWallBack" type="CSGBox" parent="Dungeon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -32 )
@@ -90,6 +98,7 @@ use_collision = true
 width = 12.0
 height = 4.0
 depth = 1.0
+material = ExtResource( 4 )
 
 [node name="EnemyWallLeft" type="CSGBox" parent="Dungeon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1.5, -26 )
@@ -97,6 +106,7 @@ use_collision = true
 width = 1.0
 height = 4.0
 depth = 12.0
+material = ExtResource( 4 )
 
 [node name="EnemyWallRight" type="CSGBox" parent="Dungeon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.5, -26 )
@@ -104,6 +114,7 @@ use_collision = true
 width = 1.0
 height = 4.0
 depth = 12.0
+material = ExtResource( 4 )
 
 [node name="EnemyWallFrontLeft" type="CSGBox" parent="Dungeon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1.5, -20 )
@@ -111,6 +122,7 @@ use_collision = true
 width = 3.0
 height = 4.0
 depth = 1.0
+material = ExtResource( 4 )
 
 [node name="EnemyWallFrontRight" type="CSGBox" parent="Dungeon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 1.5, -20 )
@@ -132,4 +144,5 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 220.0
 margin_bottom = 48.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "HP: 100 / 100"
